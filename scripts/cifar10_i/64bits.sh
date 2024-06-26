@@ -1,0 +1,20 @@
+CUDA_VISIBLE_DEVICES=0 python main.py \
+    --device cuda \
+    --dataset CIFAR10 --protocal I \
+    --notes "cifar10_i/64bits" \
+    --trainable_layer_num 2 \
+    --M 8 \
+    --feat_dim 64 \
+    --T 0.2 \
+    --hp_beta 5e-3 \
+    --softmax_temp 1 \
+    --clip_r 1.5 \
+    --init_neg_curvs 1.0 \
+    --full_hyperpq \
+    --disable_writer \
+    --epoch_num 50 \
+    --clus_mode "hier_clus" \
+    --num_clus_list "200,100,50" \
+    --warmup_epoch 3 \
+    --eval_interval 2 \
+    --topK 1000 

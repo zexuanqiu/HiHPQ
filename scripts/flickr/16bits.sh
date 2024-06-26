@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0 python main.py \
+    --device cuda \
+    --dataset Flickr25K \
+    --notes "flickr/16bits" \
+    --trainable_layer_num 0 \
+    --M 2 \
+    --feat_dim 32 \
+    --T 0.5 \
+    --hp_beta 5e-3 \
+    --softmax_temp 5.0 \
+    --clip_r 1.5 \
+    --init_neg_curvs 1.0 \
+    --full_hyperpq \
+    --disable_writer \
+    --epoch_num 50 \
+    --clus_mode "hier_clus" \
+    --num_clus_list "50,20" \
+    --warmup_epoch 1 \
+    --eval_interval 1 \
+    --topK 5000 
+
